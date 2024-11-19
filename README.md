@@ -72,6 +72,6 @@ A previsão de cluster retorna um número representando o cluster ao qual o cen�
     streamlit run app/app_streamlit.py
     ```
 
-Após isso, a interface abrirá no seu navegador de preferência. Os campos já estarão preenchidas com informações pré-estabelecidas para testar a aplicação, entretanto, sinta-se a vontade para alterá-las!
+Após isso, a interface abrirá no seu navegador de preferência. Os campos já estarão preenchidos com informações pré-estabelecidas para testar a aplicação, entretanto, sinta-se a vontade para alterá-las!
 
 # Obrigado!!
