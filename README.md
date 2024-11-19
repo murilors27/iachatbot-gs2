@@ -74,7 +74,7 @@ A previsão de cluster retorna um número representando o cluster ao qual o cen�
 Este endpoint recebe um JSON com os dados de consumo de energia renovável e fósseis e retorna a previsão do percentual de energia renovável no futuro.
 
 Exemplo de requisição:
-```json
+
 {
   "renewables_consumption": 10.5,
   "fossil_fuel_consumption": 8.2
@@ -92,7 +92,6 @@ Este endpoint recebe um JSON com as variáveis do cenário energético e retorna
 
 **Exemplo de requisição:**
 
-```json
 {
   "hydroelectric_power": 50.3,
   "solar_energy": 20.1,
