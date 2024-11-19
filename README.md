@@ -67,99 +67,11 @@ A previsão de cluster retorna um número representando o cluster ao qual o cen�
     http://127.0.0.1:5000/
     ```
 
-### Endpoints
+3. Inicie a inteface Streamlit executando:
+    ```
+    streamlit run app/app_streamlit.py
+    ```
 
-#### **POST /previsao_regressao**
+Após isso, a interface abrirá no seu navegador de preferência. Os campos já estarão preenchidas com informações pré-estabelecidas para testar a aplicação, entretanto, sinta-se a vontade para alterá-las!
 
-Este endpoint recebe um JSON com os dados de consumo de energia renovável e fósseis e retorna a previsão do percentual de energia renovável no futuro.
-
-Exemplo de requisição:
-
-{
-  "renewables_consumption": 10.5,
-  "fossil_fuel_consumption": 8.2
-}
-
-# Estrutura e Implementação do Projeto de Análise Energética
-
-## API para Previsão e Clusterização
-
-### Endpoint de Previsão de Energia Renovável
-
-**POST /previsao**
-
-Este endpoint recebe um JSON com as variáveis do cenário energético e retorna a previsão de energia renovável no futuro.
-
-**Exemplo de requisição:**
-
-{
-  "hydroelectric_power": 50.3,
-  "solar_energy": 20.1,
-  "energy_consumption": 100,
-  "investment_renewables": 5.2,
-  "gdp": 300,
-  "co2_emissions": 200,
-  "economic_growth": 3.0
-}
-
-Exemplo de resposta:
-
-json
-Copiar código
-{
-  "previsao": 15.2,
-  "mensagem": "A previsão é de que o percentual de energia renovável no futuro será 15.2%."
-}
-Endpoint de Clusterização
-POST /previsao_cluster
-
-Este endpoint recebe um JSON com as variáveis do cenário energético e retorna o número do cluster ao qual o cenário pertence, com uma explicação.
-
-Exemplo de requisição:
-
-json
-Copiar código
-{
-  "hydroelectric_power": 50.3,
-  "solar_energy": 20.1,
-  "energy_consumption": 100,
-  "investment_renewables": 5.2,
-  "gdp": 300,
-  "co2_emissions": 200,
-  "economic_growth": 3.0
-}
-Exemplo de resposta:
-
-json
-Copiar código
-{
-  "cluster": 1,
-  "explicacao": "O cluster '1' significa que o cenário está em um grupo com equilíbrio entre energias renováveis e fósseis."
-}
-Estrutura do Projeto
-bash
-Copiar código
-├── app.py                     # Arquivo principal com a API Flask
-├── app/
-│   ├── modelo_regressao.pkl   # Modelo treinado de Regressão
-│   ├── modelo_cluster.pkl     # Modelo treinado de Clusterização
-│   └── ...                    # Outros arquivos do projeto
-├── requirements.txt           # Dependências do projeto
-├── README.md                  # Este arquivo
-└── ...                        # Outros arquivos
-Como Treinar os Modelos
-Treinamento do Modelo de Regressão
-Execute o script para treinar o modelo de regressão:
-
-bash
-Copiar código
-python treinando_modelo_regressao.py
-O modelo será salvo como modelo_regressao.pkl no diretório /app.
-
-Treinamento do Modelo de Clusterização
-Execute o script para treinar o modelo de clusterização:
-
-bash
-Copiar código
-python treinando_modelo_cluster.py
-O modelo será salvo como modelo_cluster.pkl no diretório /app.
+# Obrigado!!
